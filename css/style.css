@@ -1,0 +1,345 @@
+
+@font-face {
+  font-family: 'Lato-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'),
+       url('../assets/fonts/Lato-Regular.woff2') format('woff2'), 
+       url('../assets/fonts/Lato-Regular.woff') format('woff'),
+       url('../assets/fonts/Lato-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'),
+       url('../assets/fonts/OpenSans-Regular.woff2') format('woff2'), 
+       url('../assets/fonts/OpenSans-Regular.woff') format('woff'),
+       url('../assets/fonts/OpenSans-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'OpenSans-Bold';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Open Sans Bold'),
+       url('../assets/fonts/OpenSans-Bold.woff2') format('woff2'), 
+       url('../assets/fonts/OpenSans-Bold.woff') format('woff'),
+       url('../assets/fonts/OpenSans-Bold.ttf') format('ttf');
+}
+
+/* === RESET STYLE ALL BROWSER === */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ol, ul, li,
+fieldset, form, label, legend, article, aside, figure, figcaption, 
+footer, header, menu, nav, section, time {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing:border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* === All PAGE STYLE === */
+
+html{
+	font-size: 10px;
+	font-family: 'OpenSans-Regular', 'Arial','Verdana', sans-serif;
+	color: #000;
+	background: #FFF;
+}
+
+body {
+ /* background-color: rgba(254, 254, 204, 0.3);*/
+  line-height: 1;
+}
+
+header, section {
+  width:100%;
+  margin:0 auto;
+  clear:both;
+  overflow: hidden;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1300px;
+  min-height: calc(100vh - 40px);   /* sticky footer*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato-Regular', 'Arial','Verdana', sans-serif;
+}
+
+a {
+  color: #529132;
+}
+
+/* === HEADER === */
+
+header {
+	height: 100px;
+  position: fixed;
+  margin-top: -100px;
+}
+
+.header__top {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 1.4rem;
+  background-color: #529132;
+  text-align: center;
+}
+
+.navigation {
+  height: 70px;
+}
+
+.navigation__link__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.2rem;
+    background-color: rgb(255, 255, 226);
+    text-transform: uppercase;
+}
+
+.nav__link {
+  border-bottom: 1px solid rgba(254, 254, 204, 0.3);
+  padding: 4px;
+}
+
+.nav__link:hover {
+	border-bottom: 1px solid #529132;
+}
+/*
+.home {
+  width: 100%;
+  height: 500px;
+  background-image: url(../assets/images/castle.png);
+}*/
+
+.description {
+  /*margin-top: 100px;*/
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-direction: column;
+}
+
+.description__two__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: row;
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+.description__title, 
+.play__title,
+.screenhots__title,
+.developer__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  font-size: 3.2rem;
+  color: #1b0500;
+  text-transform: uppercase;
+}
+
+.play__title {
+  margin-top: 100px;
+}
+
+.play__screen {
+  width: 80%;
+    height: 500px;
+    margin: 0 auto;
+    background-image: url(../assets/images/screen-1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+.play__button {
+    width: 200px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: #529132;
+    color: #fbf9e3;
+    border-radius: 6px;
+    font-size: 2rem;
+    letter-spacing: 2.4;
+    cursor: pointer;
+    box-shadow: 0 0 1rem #000;
+    margin: 0 auto;
+}
+
+.play__button a {
+  color: white;
+}
+
+.play__button:hover {
+    background-color: #4a7228;
+}
+
+.description__title::after,
+.play__title::after,
+.screenhots__title::after,
+.developer__title::after {
+  content: "";
+  width: 35%;
+  height: 2px;
+  background-color: #1b0500;
+  margin-left: 15px;
+}
+
+.description__title::before,
+.play__title::before,
+.screenhots__title::before,
+.developer__title::before {
+  content: "";
+  width: 35%;
+  height: 2px;
+  background-color: #1b0500;
+  margin-right: 15px;
+}
+
+.about__game,
+.texnologies,
+.development__plan {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+
+.about__game {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.texnologies,
+.development__plan {
+  width: 42%;
+}
+
+.about__game__text h3,
+.texnologies__text h3,
+.development__plan__text h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  font-size: 2.6rem;
+}
+
+.about__game__text p, 
+.texnologies__text p,
+.development__plan__text p,
+.screenhots__text p {
+  font-size: 1.6rem;
+  line-height: 2.0rem;
+  text-align: justify;
+}
+
+.screenhots {
+  display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.screenhots__content {
+  width: 47%;
+  margin-top: 20px;
+}
+
+.screenhots__content img {
+  width: 100%;
+}
+
+.screenhots__content p {
+  padding: 10px;
+  text-align: center;
+}
+
+.developer__content {
+  width: 25%;
+  margin: 0 auto;
+}
+
+.developer {
+  display: flex;
+}
+
+.developer__content img {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: block;
+}
+
+.developer__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.developer__text h3 {
+  font-size: 2.4rem;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.developer__text p {
+  font-size: 1.6rem;
+  line-height: 2.0rem;
+  text-align: center;
+}
+
+.icon__social {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+}
+
+.icon__social img {
+  width: 36px;
+}
+
+footer {
+  width: 100%;
+  height: 40px;
+  background-color: #529132;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
